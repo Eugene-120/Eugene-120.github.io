@@ -39,6 +39,12 @@ section {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Добавлен радиус скругления углов для эффекта */
+}
+
 form {
     display: flex;
     flex-direction: column;
