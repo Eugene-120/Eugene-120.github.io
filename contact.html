@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Я - студент ВШЭ</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="contact.html">Контакт</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Свяжитесь со мной</h2>
+            <form action="process_form.php" method="post">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Отправить">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Я - студент ВШЭ. Все права защищены.</p>
+    </footer>
+
+</body>
+
+</html>
