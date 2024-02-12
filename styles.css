@@ -2,7 +2,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #1a1a1a;
+    color: #fff;
 }
 
 header {
@@ -15,7 +16,7 @@ header {
 nav ul {
     list-style: none;
     padding: 0;
-    background-color: #eee;
+    background-color: #222;
     text-align: center;
     margin: 0;
     padding: 10px;
@@ -31,11 +32,11 @@ main {
 }
 
 section {
-    background-color: #fff;
+    background-color: #333;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 form {
@@ -45,19 +46,25 @@ form {
 
 label {
     margin-bottom: 5px;
+    color: #fff;
 }
 
 input, textarea {
     margin-bottom: 10px;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #555;
     border-radius: 4px;
+    background-color: #444;
+    color: #fff;
 }
 
 input[type="submit"] {
-    background-color: #333;
+    background-color: #007BFF;
     color: #fff;
     cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
 }
 
 footer {
