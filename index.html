@@ -5,16 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Студент ВШЭ</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-    #studentPhoto {
-        width: 500px; /* Новая ширина */
-        height: auto; /* Автоматическое определение высоты для сохранения пропорций */
-        border: 1px solid #000;
-    }
-    
-    </style>
 </head>
-<body>
+<body class="index-page">
 
 <header>
         <h1>Я - студент ВШЭ</h1>
@@ -30,14 +22,25 @@
 
 <main>
     <section id="home">
-        <h2>Добро пожаловать на главную страницу</h2>
-        <p>Здесь вы найдете графическую и текстовую информацию о моей жизни как студента Высшей Школы Экономики.</p>
-        <img id="studentPhoto" src="tmp.jpg" alt="Фото студента">
+        <div>
+            <h2>Добро пожаловать на главную страницу</h2>
+            <p>Здесь вы найдете информацию обо мне, как студенте Высшей Школы Экономики.</p>
+        </div>
+        <img id="hse-logo" src="logo.jpg" alt="Логотип ВШЭ">
     </section>
 
     <section id="about">
-        <h2>Обо мне</h2>
-        <p>Привет! Меня зовут Евгений, я студент Высшей Школы Экономики.</p>
+        <div>
+            <h2>Обо мне</h2>
+            <p>Привет! Меня зовут Евгений, я студент Высшей Школы Экономики на образовательной программе ПМ. </p>
+            <p>Мои навыки:</p>
+            <p> - C++</p>
+            <p> - Python</p>
+            <p> - SQL</p>
+            <p>Буду рад видеть вас в моем <a class="telegram-link" href="https://t.me/eugene_120">Telegram</a> канале!</p>
+            <p>Загляните в моё <a class="telegram-link" href="my_cv.pdf" target="_blank">резюме</a> для получения дополнительной информации.</p>
+        </div>
+        <img id="my-photo" src="tmp.jpg" alt="Моё фото">
     </section>
 </main>
 
