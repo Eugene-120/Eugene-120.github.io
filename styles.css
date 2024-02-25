@@ -6,6 +6,7 @@ body {
     color: #fff;
 }
 
+
 header {
     background-color: #333;
     color: #fff;
@@ -42,7 +43,7 @@ section {
 img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px; /* Добавлен радиус скругления углов для эффекта */
+    border-radius: 8px; 
 }
 
 form {
@@ -73,12 +74,11 @@ input[type="submit"] {
     border-radius: 4px;
 }
 
-/* Стили для form input[type="range"] */
 form input[type="range"] {
     -webkit-appearance: none;
     width: 100%;
     height: 10px;
-    background: #2c3e50; /* Цвет ползунка */
+    background: #2c3e50; 
     border-radius: 5px;
     outline: none;
     opacity: 0.7;
@@ -86,33 +86,28 @@ form input[type="range"] {
     margin: 10px 0;
 }
 
-/* Стили для изменения внешнего вида ползунка при фокусе */
 form input[type="range"]:focus {
     opacity: 1;
 }
 
-/* Стили для изменения внешнего вида ползунка при активации */
 form input[type="range"]:active {
     opacity: 1;
 }
 
-/* Стили для измененного положения ползунка */
 form input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 20px;
     height: 20px;
-    background: #fff; /* Цвет бегунка (ползунка) */
+    background: #fff; 
     border-radius: 50%;
     cursor: pointer;
 }
 
-/* Стили для изменения внешнего вида бегунка при фокусе */
 form input[type="range"]:focus::-webkit-slider-thumb {
     background: #fff;
 }
 
-/* Стили для изменения внешнего вида бегунка при активации */
 form input[type="range"]:active::-webkit-slider-thumb {
     background: #fff;
 }
@@ -124,42 +119,35 @@ footer {
     padding: 10px;
 }
 
-/* Стили для header h1 */
 header h1 {
     font-size: 2em;
     margin: 0;
 }
 
-/* Стили для nav a */
 nav a {
     text-decoration: none;
     color: #fff;
     font-weight: bold;
 }
 
-/* Стили для nav ul li:hover */
 nav ul li:hover {
     background-color: #555;
 }
 
-/* Стили для section h2 */
 section h2 {
     color: #ffffff;
 }
 
-/* Стили для form label */
 form label {
     display: block;
     color: #ffffff;
     font-weight: bold;
 }
 
-/* Стили для footer p */
 footer p {
     margin: 0;
 }
 
-/* Стили для @media (max-width: 600px) */
 @media (max-width: 600px) {
     main {
         margin: 10px;
@@ -170,3 +158,44 @@ footer p {
     }
 }
 
+/* Добавим стили для логотипа и анимацию */
+#hse-logo {
+    width: 100px; /* Размер логотипа */
+    height: auto;
+    margin-left: 20px;
+    order: 1; /* Изменим порядок отображения на маленьких экранах */
+}
+
+/* Добавим стили для фотографии в обо мне */
+#my-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 300px;
+    margin-right: 20px;
+    order: 1; /* Изменим порядок отображения на маленьких экранах */
+}
+
+
+/* Добавим стили для ссылки на телеграм в обо мне */
+.telegram-link {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Изменения в разделе обо мне для выравнивания текста и фотографии */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Изменения в разделе обо мне для выравнивания текста и фотографии */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
