@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Студент ВШЭ</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+    #studentPhoto {
+        width: 500px; /* Новая ширина */
+        height: auto; /* Автоматическое определение высоты для сохранения пропорций */
+        border: 1px solid #000;
+    }
+    
+    </style>
 </head>
 <body>
 
 <header>
-    <h1>Я - студент ВШЭ</h1>
+        <h1>Я - студент ВШЭ</h1>
 </header>
 
 <nav>
@@ -24,7 +32,7 @@
     <section id="home">
         <h2>Добро пожаловать на главную страницу</h2>
         <p>Здесь вы найдете графическую и текстовую информацию о моей жизни как студента Высшей Школы Экономики.</p>
-        <img src="tmp.jpg" alt="Фото студента">   
+        <img id="studentPhoto" src="tmp.jpg" alt="Фото студента">
     </section>
 
     <section id="about">
