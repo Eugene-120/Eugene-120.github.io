@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакт</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .success-message {
+            display: none;
+            color: green;
+            margin-top: 10px;
+        }
+
+        #colorPreview {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Я - студент ВШЭ</h1>
+    </header>
+
+    <nav>
+        <ul class="main-menu">
+            <li><a href="index.html#home">Главная</a>
+                <ul class="sub-menu">
+                    <li><a href="index.html#home">Основная информация</a></li>
+                    <li><a href="index.html#about">Обо мне</a></li>
+                    <li><a href="index.html#my-location">Моё местоположение</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html#contact">Контакты</a>
+                <ul class="sub-menu">
+                    <li><a href="contact.html#contact">Обратная связь</a></li>
+                    <li><a href="contact.html#chat">Чат с автором</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+
+    <main>
+        <section id="contact">
+            <h2>Свяжитесь со мной</h2>
+            <form id="contactForm" action="/submit-contact-form" method="post" onsubmit="return handleFormSubmit()">    
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <label for="subject">Тема:</label>
+                <select id="subject" name="subject" required>
+                    <option value="question">Вопрос</option>
+                    <option value="feedback">Обратная связь</option>
+                    <option value="other">Другое</option>
+                </select>
+
+                <label for="priority">Приоритет:</label>
+                <input type="radio" id="priority-high" name="priority" value="high" required>
+                <label for="priority-high">Высокий</label>
+                <input type="radio" id="priority-medium" name="priority" value="medium">
+                <label for="priority-medium">Средний</label>
+                <input type="radio" id="priority-low" name="priority" value="low">
+                <label for="priority-low">Низкий</label>
+
+                <label for="birthdate">Дата рождения:</label>
+                <input type="date" id="birthdate" name="birthdate" required onchange="updateAgeOutput()">
+
+                <label for="file">Выберите файл:</label>
+                <input type="file" id="file" name="file" accept=".pdf, .doc, .docx">
+
+                <label for="color">Выберите цвет:</label>
+                <input type="color" id="color" name="color" value="#ff0000" onchange="updateColorValue()">
+                <output id="colorOutput" for="color">Цвет: #ff0000</output>
+                <div id="colorPreview"></div>
+
+
+                <label for="age">Возраст:</label>
+                <input type="range" id="age" name="age" min="18" max="99" value="25" oninput="updateAgeOutput()">
+                <output id="ageOutput" for="age">Возраст: 25 лет</output>
+
+                <input type="submit" value="Отправить">
+                <input type="reset" value="Сбросить" onclick="resetForm()">
+            </form>
+
+            <div id="successMessage" class="success-message">Форма успешно отправлена! Спасибо за ваше сообщение.</div>
+        </section>
+
+        <section id="chat">
+            <h2>Чат с автором</h2>
+            <div id="chat-container">
+                <div id="chat-messages"></div>
+                <input type="text" id="message-input" placeholder="Введите сообщение...">
+                <button id="send-button">Отправить</button>
+                <button id="record-button">Запись голоса</button>
+                <button id="stop-record-button">Остановить запись и отправить</button>
+                <button id="play-button" disabled>Воспроизвести</button>
+                <div id="recording-indicator"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Я - студент ВШЭ. Все права защищены.</p>
+    </footer>
+
+    <script>
+        function handleFormSubmit() {
+            document.getElementById('successMessage').style.display = 'block';
+
+            setTimeout(function () {
+                document.getElementById('contactForm').reset();
+                document.getElementById('successMessage').style.display = 'none';
+                resetForm();
+            }, 3000);
+
+            return false;
+        }
+
+        function updateAgeOutput() {
+            var ageOutput = document.getElementById('ageOutput');
+            var ageInput = document.getElementById('age');
+            ageOutput.textContent = 'Возраст: ' + ageInput.value + ' лет';
+        }
+
+        function updateColorValue() {
+            var colorInput = document.getElementById('color');
+            var colorOutput = document.getElementById('colorOutput');
+            colorOutput.textContent = 'Цвет: ' + colorInput.value;
+
+            var colorPreview = document.getElementById('colorPreview');
+            colorPreview.style.backgroundColor = colorInput.value;
+        }
+
+        function resetForm() {
+            document.getElementById('ageOutput').textContent = 'Возраст: 25 лет';
+            document.getElementById('colorOutput').textContent = 'Цвет: #ff0000';
+            document.getElementById('colorPreview').style.backgroundColor = '';
+        }
+    </script>
+
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
