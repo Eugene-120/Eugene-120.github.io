@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Студент ВШЭ</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body class="index-page">
 
@@ -16,6 +17,8 @@
     <ul>
         <li><a href="index.html#home">Главная</a></li>
         <li><a href="index.html#about">Обо мне</a></li>
+        <li><a href="index.html#my-location">Моё местоположение</a></li>
+        <li><a href="contact.html#chat">Чат с автором</a></li> 
         <li><a href="contact.html#contact">Контакт</a></li>
     </ul>
 </nav>
@@ -37,16 +40,40 @@
             <p> - C++</p>
             <p> - Python</p>
             <p> - SQL</p>
-            <p>Буду рад видеть вас в моем <a class="telegram-link" href="https://t.me/eugene_120">Telegram</a> канале!</p>
+            <p>Буду рад видеть вас в моем <a class="telegram-link" href="https://t.me/eugene_120">Telegram</a>!</p>
             <p>Загляните в моё <a class="telegram-link" href="my_cv.pdf" target="_blank">резюме</a> для получения дополнительной информации.</p>
         </div>
         <img id="my-photo" src="tmp.jpg" alt="Моё фото">
     </section>
+
+    <section id="my-location"> <!-- Добавленный блок -->
+        <h2>Моё местоположение</h2>
+        <div id="map"></div>
+    </section>
+
 </main>
 
 <footer>
     <p>&copy; 2024 Я - студент ВШЭ. Все права защищены.</p>
 </footer>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="scripts.js"></script>
+
+<script>
+    // Создание карты
+    var map = L.map('map').setView([55.7558, 37.6173], 10);
+
+    // Добавление слоя OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Добавление маркера
+    L.marker([55.7558, 37.6173]).addTo(map)
+        .bindPopup('Москва, Россия')
+        .openPopup();
+</script>
 
 </body>
 </html>
