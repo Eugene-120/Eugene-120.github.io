@@ -29,14 +29,23 @@
     </header>
 
     <nav>
-        <ul>
-            <li><a href="index.html#home">Главная</a></li>
-            <li><a href="index.html#about">Обо мне</a></li>
-            <li><a href="index.html#my-location">Моё местоположение</a></li> 
-            <li><a href="contact.html#chat">Чат с автором</a></li>
-            <li><a href="contact.html#contact">Контакт</a></li>
+        <ul class="main-menu">
+            <li><a href="index.html#home">Главная</a>
+                <ul class="sub-menu">
+                    <li><a href="index.html#home">Основная информация</a></li>
+                    <li><a href="index.html#about">Обо мне</a></li>
+                    <li><a href="index.html#my-location">Моё местоположение</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html#contact">Контакты</a>
+                <ul class="sub-menu">
+                    <li><a href="contact.html#contact">Обратная связь</a></li>
+                    <li><a href="contact.html#chat">Чат с автором</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
+    
 
     <main>
         <section id="contact">
@@ -93,6 +102,7 @@
         </section>
 
         <section id="chat">
+            <h2>Чат с автором</h2>
             <div id="chat-container">
                 <div id="chat-messages"></div>
                 <input type="text" id="message-input" placeholder="Введите сообщение...">
